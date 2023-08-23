@@ -10,7 +10,7 @@ DATE=$(date +"%d-%m-%Y-%H:%M:%S")
 
 function jq() {
     # simple json handler using python, which is installed by default in debian
-    python -c "import sys;import json;a=json.loads(sys.argv[1]);print(a[sys.argv[2]]);" "$1" $2
+    python3 -c "import sys;import json;a=json.loads(sys.argv[1]);print(a[sys.argv[2]]);" "$1" $2
 }
 
 HOST=$(hostname)
